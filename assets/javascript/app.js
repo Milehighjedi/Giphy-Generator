@@ -1,35 +1,34 @@
-$(document).ready(function() {
-    var input= $('#input');
+$(document).ready(function () {
+    var input = $('#input');
     var submit = $('#submit');
     var apikey = 'dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr'
-    var imgBody = $('.imgBody');
+    var imgBody = $('.img-body');
 
-    submit.on('click', function(event) {
+    submit.on('click', function (event) {
         event.preventDefault();
+        imgBody.empty();
         var inputValue = input.val();
         getGiphys(inputValue);
-});
-
-function getGiphys(inputValue) {
-    $.get("http://api.giphy.com/v1/gifs/search?q=" + inputValue + "&api_key=dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr&limit=5")
-    .done(function (data) {
-        for(var i = 0; i <= 5; i++) {
-        console.log(data.data[i].images.downsized.url);
-        createbox()
-        }
+        input.val(' ');
     });
 
-};  
+    function getGiphys(inputValue) {
+        $.get("http://api.giphy.com/v1/gifs/search?q=" + inputValue + "&api_key=dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr&limit=10")
+            .done(function (data) {
+                for (var i = 0; i < 10; i++) {
+                    var gifImg = data.data[i].images.downsized.url;
+                    createbox(gifImg);
+                }
+            });
 
-function createbox() {
-    var newImg = $('img');
-    var newDiv = $('div');
+    };
 
-    imgBody.append(newImg);
-}
+    function createbox(gifImg) {
+        var newImg = $('<img>');
+        newImg.attr('src', gifImg);
+        newImg.addClass('img-box');
 
-
-
-
+        imgBody.append(newImg);
+    }
 
 });

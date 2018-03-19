@@ -1,6 +1,38 @@
+body {
+    background-color:#25a5d8;
+}
+ 
+.jumbotron{
+    background-color: #a8a8a8;
+    font-family: 'tangerine', serif;
+    text-align: center;
+}
+
+.Container {
+    background-color: #464646;
+    border-radius: 6px;
+    width: 95%;
+    margin: auto;
+    padding-top: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+}
+
 .img-box{
-    height: 150px;
-    width:  150px;
+    height: 200px;
+    width:  200px;
     border: 1px solid black;
-    float: left;
+    
+}
+
+.panel {
+    background-color: #464646;
+    border-radius: 6px;
+    width: 95%;
+    margin: auto;
+    padding-top: 5px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle; 
 }
