@@ -3,7 +3,7 @@ $(document).ready(function () {
     var submit = $('#submit');
     var apikey = 'dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr'
     var imgBody = $('.img-body');
-    var topics = ['George Carlin', 'Dave Chapelle', 'Mitch Hedberg', 'Chris Rock', 'Dane Cook', 'Lenny Bruce', 'Patton Oswalt', 'Kat Williams', 'Robbin Williams', 'Sam Kinison', 'Lewis Black'];
+    var topics = ['George Carlin', 'Dave Chapelle', 'Mitch Hedberg', 'Chris Rock', 'Dane Cook', 'Bill Burr', 'Patton Oswalt', 'Kat Williams', 'Robin Williams', 'Sam Kinison', 'Lewis Black'];
 
     submit.on('click', function (event) {
         event.preventDefault();
