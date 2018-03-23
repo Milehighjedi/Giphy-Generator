@@ -14,7 +14,7 @@ $(document).ready(function () {
     });
 
     function getGiphys(inputValue) {
-        $.get("http://api.giphy.com/v1/gifs/search?q=" + inputValue + "&api_key=dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr&limit=10")
+        $.get("https://api.giphy.com/v1/gifs/search?q=" + inputValue + "&api_key=dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr&limit=10")
             .done(function (data) {
                 for (var i = 0; i < 10; i++) {
                     var gifImg = data.data[i].images.downsized.url;
