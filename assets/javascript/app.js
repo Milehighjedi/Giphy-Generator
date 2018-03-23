@@ -62,7 +62,7 @@ $(document).on('click', '.gif-button', function () {
     var topic = $(this).data('topic').trim();
     var term = topic.replace(/[^A-Za-z0-9]/g, '+');
 
-    var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + term + "&api_key=dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr&limit=10";
+    var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + term + "&api_key=dOaCcg8QMcvd3feyu19OyJEVp4nP2SJr&limit=10";
 
     $.ajax({
         url: queryURL,
